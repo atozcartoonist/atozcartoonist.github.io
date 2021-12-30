@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=General name=Rating>
+<meta content="1 Day" name=Revisit-after>
+
+<title>Online Alphabetizer Tool | Sort Text Lines, Sort Text List, Arrange List Alphabetically, Numerically, Natural..Free Alphabetical Order Tool.</title>
+<link rel="icon" href="favicon.ico" type="image/png">
+<link href="textfilteralphabetizenotepadexcel/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+<link href="textfilteralphabetizenotepadexcel/style.css" type=text/css rel=stylesheet>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="textfilteralphabetizenotepadexcel/jquery-linedtextarea.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("alltexttools.html"); 
+    });
+    </script> 
+
+<meta name="description" content="Online ,Alphabetize arrange (words or phrases) in alphabetical order.Sort a list: Alphabetically | Natural | Numerically | Reverse | Random  | Insensitive | Sensitive | Ascending | Descending | String | Lines | List  | Excel , NotePad . Essential, Simple Web Browser Based Text ,String And Character Manipulation Tools. Useful For Students Of All Ages And Skill Levels, As well As Teachers Professional Text Editors - Writers And Professional Coding Programmers - Developers.">
+<meta name="keywords" content="online,text,tools,alphabetize,alphabetical,sort,list,order,alphabetizing,lines,arrange,learn,reverse,random,Shuffle,length,insensitive,sensitive,ascending,descending,numerical,numeric,numerically,coding,Excel,NotePad,education,students,university,college,STEM,science,technology,engineering,math,coding,programmers,developers,graduate,c++,python,html,php,java,javascript,url,link,edit,lines,list,strings,content,delete,empty,numbers,extract,ASCII,CUNIX,Unicode,trim,special,characters,symbols,extractor,extract,learn,alphabet,alfabetizar,editor.">
+<script>
+var titles = {"Alphabetize arrange":"learn coding tools","Sorting by length:"excel","Order by length":"list","Alphabetically":"strings","Alphabetize arrange":"lines","Sort a list":"tools","alphabetical Order":"notepad","Alphabetizer":"online"};
+var exampleRaw = "Alphabetize";
+</script>
+
+</head>
+
+<body>
+
+<div id="handle-wrapper"><div id="handle"></div></div>
+<div id="home"><a href="http://www.Text-Filter.com">Text Tools Online </a></div>
+<div id="lid">
+<div id="menubar"><br>
+<div class="fb-like" data-href="https://facebook.com/textfilter" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+
+</div>
+<br>
+</div>
+
+
+
+<div id="lock"></div>
+
+<div id="main">
+<h1>Online ,Alphabetize arrange (words or phrases) in alphabetical order.</h1>
+
+-------------------------
+
+<br>
+<noscript>
+    <div style="border: 2px solid red; padding: .2em; margin: 1em">
+        <h3>JavaScript disabled!</h3>
+        <p>This page does not work without JavaScript.</p>
+    </div>
+</noscript>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/oti.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com2.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com1.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com6.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com8.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/txtfs.js"></script>
+
+
+<h2>Alphabetically | Natural | Numerically | Reverse | Random  | String | List Excel , NotePad ++ Plain Text Filter.</h2>
+<p class="important"><br>
+Sort a list Natural.<br>
+Sort a list Alphabetically, Abc - Z .<br>
+Sort a list in reverse order, Z-A .<br>
+Sort a list Numerically.<br>
+Sorting by length based on the length of each line:<br>
+Order by length of characters - Short To Long.<br>
+Length order - Long To Short.<br>
+Shuffle ,Randomizing Order - List Randomizer.<br>
+Case insensitive order and case sensitive order.<br>
+Arranging numbers in ascending order and descending order<br>
+Remove duplicate lines (keeping only first occurrence).<br>.
+</p>
+
+<h2> STEM | SEO | URLs | Text | Lists | Lines | Strings | Excel | NotePad ,Helpful Online Tools And Utilities.</h2>
+<p class="descripton">Essential, Simple Web Browser Based Text ,String And Character Manipulation Tools.</p>
+<p class="descripton">Useful For Students Of All Ages And Skill Levels, As well As Teachers Professional Text Editors - Writers And Professional Coding Programmers - Developers.</p>
+<br>
+----------------------------
+<br>
+<form id="myForm" name="myForm" action="#">
+
+<!-- Text Filter -->
+<p>Paste your text below (or upload a file) <i class="fa fa-upload"></i>
+<input type="file" id="input-file"> <input type="button" class="buttons" onclick="autoText(form); return true" value=" Auto Text - Lorem Ipsum "></p>
+<p class="input">Input ▼
+<textarea rows="5" cols="80" name="inputText" id="inputText" spellcheck="false" wrap="off" placeholder="Type or paste your content here." autofocus></textarea></p>
+
+<p class="input">Output ▼</p><p class="output">
+<textarea rows="12" cols="80"  class=lined name="outputText" id="outputText" spellcheck="false" wrap="off"></textarea></p>
+
+<div>
+
+			<input type="button" class="buttons" onclick="myFunction();" value="Select All" /> Or
+			<input type="button" class="buttons" onclick="savefile('saveas','outputText');" value="Download" />
+                        <input type="text" value="Text-Filter.Com.txt" name="saveas" id="saveas" size="21">
+                        <input name="txtf" id="unix" type="radio">Unix.
+                        <input name="txtf" id="dos" checked="checked" type="radio">Dos.
+                        <input type="reset" class="buttons" value="Reset">
+                        <input type="button" class="buttons" onclick="copyText();" value="Copy From Output To Input" />
+</div>
+
+<br>Sort by delimiter*
+<input id="txt_delimiter" style="width: 80px;" type="text">
+at column number
+<input id="txt_num" style="width: 60px;" maxlength="7" value="1" type="text">
+*Blank For Letters, Space For Words etc.<br><br>
+<input value="Sort Natural" onclick="natsort(true);" title="Alphabetize." type="button" class="buttons"> 
+<input value="Reverse Sort Z-A" onclick="nat_sort(true);" type="button" class="buttons"> 
+<input style="border-left: 0px none;" value="Case Sensitive Sorting" onclick="natsort(false);" type="button" class="buttons">
+<input type="button" class="buttons" onClick="shtlInput();" value="Short To Long">
+<input type="button" class="buttons" onClick="ltshInput();" value="Long To Short">
+<input type="button" class="buttons" onClick="shfInput();" value="Shuffle">
+<input type="button" class="buttons" onClick="sortvalues(0);" value="Sort Alphabetically">
+<input type="button" class="buttons" onClick="sortvalues(1);" value="Sort Numerically">
+<input type="button" class="buttons" onClick="sortdInput();" title="Descending order of Numbers. Arranged from largest to smallest.Example: 100, 45, 21, 17, 1." value="Nº Descending Order">
+<input type="button" class="buttons" onClick="sortaInput();" title="Ascending order of Numbers.Arranged from the smallest to the largest E.g. 1, 17, 21, 45 ,100." value="Nº Ascending Oorder">
+<input type="button" class="buttons" onClick="remove_ddlist11();" title="Remove duplicate lines (keeping only first occurrence)." value="DeDuplication">
+<br>
+<br>
+</form>
+<br>
+------------------------
+<br>
+<br>
+Looking For More STEM - Coding Tools 
+<br>
+<br>
+<details>
+<summary><i class="fa fa-search"></i> Find Out More </summary>
+    <p>
+        </p>
+<div id="includedContent"></div></details><br>
+<script>
+$(function() {
+	$(".lined").linedtextarea(
+		{selectedLine: 0}
+	);
+});
+</script>
+
+    <script type="text/javascript">
+        document.getElementById('input-file')
+  .addEventListener('change', getFile)
+
+function getFile(event) {
+	const input = event.target
+  if ('files' in input && input.files.length > 0) {
+	  placeFileContent(
+      document.getElementById('inputText'),
+      input.files[0])
+  }
+}
+
+function placeFileContent(target, file) {
+	readFileContent(file).then(content => {
+  	target.value = content
+  }).catch(error => console.log(error))
+}
+
+function readFileContent(file) {
+	const reader = new FileReader()
+  return new Promise((resolve, reject) => {
+    reader.onload = event => resolve(event.target.result)
+    reader.onerror = error => reject(error)
+    reader.readAsText(file)
+  })
+}
+    </script>
+    <!-- Start of ScrollTop Code -->
+<script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 400) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+            $('.scrollup').click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 700);
+                return false;
+            });
+        });
+    </script>
+
+    <a href="#" class="scrollup"><i class="fa fa-caret-square-o-up fa-2x"></i></a>
+   <!-- End of ScrollTop Code -->
+
+<script>
+function myFunction() {
+    document.getElementById("outputText").select();
+}
+</script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com12.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com7.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com9.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com0.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com13.js"></script>
+    <script type="text/javascript">
+
+	function autoText ( form )
+	{
+		var message = "*";
+		message += "\n5";
+		message += "\n3";
+		message += "\n77";
+		message += "\nAbcd";
+		message += "\nMicrosoft";
+		message += "\nabcd";
+		message += "\nLorem Ipsum";
+		message += "\nGoogle";
+		message += "\nWashington, DC, the U.S. capital, is a compact city on the Potomac River, bordering the states of Maryland and Virginia. It’s defined by imposing neoclassical monuments and buildings – including the iconic ones that house the federal government’s 3 branches: the Capitol, White House and Supreme Court.";
+		form.inputText.value = message;
+	}
+</script>
+
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com3.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com4.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/txtfd.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com11.js"></script>
+	<script type="text/javascript" src="textfilteralphabetizenotepadexcel/text-filter.com5.js"></script>
+<br>
+
+<div id="banner">
+
+
+
+</div>
+
+
+
+</div>
+<br>
+<br>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="footer">
+
+<!--  Text Filter-->
+
+<p>© Text-Filter.com 2009-2018 <a href="http://www.Text-Filter.com">Text Manipulation Tools.</a></p>
+</div>
+
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10642351; 
+var sc_invisible=1; 
+var sc_security="e96f4326"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/10642351/0/e96f4326/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+
+</body>
+</html>
