@@ -1,81 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        .form-container {
-            background: #000;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .form-container h2 {
-            color: #00FFFF;
-            margin-bottom: 20px;
-        }
-        .form-container p {
-            color: #FFF;
-            margin-bottom: 20px;
-        }
-        .form-group input {
-            background: transparent;
-            border: 1px solid #00FFFF;
-            border-radius: 4px;
-            padding: 10px;
-            color: #00FFFF;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .form-group input::placeholder {
-            color: #00FFFF;
-        }
-        .btn-primary {
-            background-color: #00FFFF;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            color: #000;
-            width: 100%;
-        }
-        .btn-primary:hover {
-            background-color: #00e0e0;
-        }
-    </style>
-</head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>AtoZCartoonist (GDrive)</title>  <!-- Fonts and Icons -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"/>  <!-- Bootstrap & Video.js -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/lumen/bootstrap.min.css"/>
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet"/>  <!-- Video.js Plugin -->  <script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@1.1.1/dist/videojs-hls-quality-selector.min.js"></script>  <style>
+    body {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 12px;
+    }
+    .btn {
+      background-color: DodgerBlue;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .btn:hover {
+      background-color: RoyalBlue;
+    }
+    .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+    .resp-iframe, #video-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style></head>
 <body>
+  <center>
+    <br/>
+    <a href="/"><img src="http://4.bp.blogspot.com/-tyI9VhNYz3s/YCpnEA4zceI/AAAAAAAADqo/Vsd082M2aUoA0M_iF78j00uuV22Br0q3ACK4BGAYYCw/s1600/20210215_014220.png" alt="AtoZcartoonist" width="315"/></a>
+  </center>  <div class="container">
+    <div id="video-info" class="my-4"></div>
+    <div class="resp-container">
+      <video id="video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
+    </div>
+  </div>  <!-- JS libraries -->  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>  <script>
+    const API_KEY = 'YOUR_GOOGLE_API_KEY'; // Replace with real API key
+    const fileId = new URLSearchParams(window.location.search).get('id');
 
-<div class="form-container">
-    <form id="adForm" name="tp" action="<?php the_permalink() ?>" method="post" onsubmit="return validateForm_fuck420()">
-        <input type="hidden" name="newwpsafelink" value="<?php echo $_COOKIE['tp']; ?>">
-        <div>
-            <hr />
-            <h2>Perform Ad Click</h2>
-            <hr />
-            <p>First click on any banner Ad, then copy the url which will open after clicking the banner ad, then, paste the URL below and click Submit for your Destination Link.</p>
-            <div class="form-group text required">
-                <label for="username" class="sr-only">Ad Link</label>
-                <input type="text" name="username" placeholder="Paste Ad Link Here" class="form-control" required="required" maxlength="150" id="username" value=""/>
-                <span class="help-block"></span>
-            </div>
-        </div>
-        <button id="tp982" class="btn btn-primary">Submit</button>
-        <hr />
-    </form>
-</div>
+    if (fileId) fetchVideoDetails(fileId);
 
-</body>
+    async function fetchVideoDetails(fileId) {
+      try {
+        const res = await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}?key=${API_KEY}&fields=name,thumbnailLink,size,videoMediaMetadata,createdTime`);
+        const file = await res.json();
+
+        const { name, thumbnailLink, size, videoMediaMetadata, createdTime } = file;
+        const { width, height, durationMillis } = videoMediaMetadata || {};
+
+        // Show metadata
+        document.getElementById('video-info').innerHTML = `
+          <h3>${name}</h3>
+          <img src="${thumbnailLink}" alt="${name}" style="max-width: 200px;"/>
+          <p><strong>Size:</strong> ${(size / (1024 * 1024)).toFixed(2)} MB</p>
+          <p><strong>Duration:</strong> ${formatDuration(durationMillis)}</p>
+          <p><strong>Resolution:</strong> ${width}x${height}</p>
+          <p><strong>Created Time:</strong> ${new Date(createdTime).toLocaleString()}</p>
+        `;
+
+        // HLS link from Google Drive (you need a backend proxy or public streaming link)
+        const hlsUrl = `https://example.com/hls/${fileId}/master.m3u8`; // Replace this with actual HLS link
+
+        const player = videojs('video-player', {
+          controls: true,
+          autoplay: false,
+          preload: 'auto',
+          fluid: true,
+          sources: [{
+            src: hlsUrl,
+            type: 'application/x-mpegURL'
+          }],
+          html5: {
+            hls: {
+              overrideNative: true
+            }
+          }
+        });
+
+        player.hlsQualitySelector();
+      } catch (err) {
+        document.getElementById('video-info').innerHTML = `<p class="text-danger">Error fetching file: ${err.message}</p>`;
+      }
+    }
+
+    function formatDuration(ms) {
+      if (!ms) return '-';
+      const sec = Math.floor(ms / 1000);
+      const min = Math.floor(sec / 60);
+      const hr = Math.floor(min / 60);
+      return `${hr}h ${min % 60}m ${sec % 60}s`;
+    }
+  </script></body>
 </html>
