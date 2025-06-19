@@ -1,1 +1,60 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Quote</title>
+  <style>
+    body {
+      background: #f3f4f6;
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .quote-box {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .quote-box::before {
+      content: "❝";
+      font-size: 4rem;
+      color: #d1d5db;
+      position: absolute;
+      top: -30px;
+      left: 20px;
+    }
+
+    .quote-text {
+      font-size: 1.4rem;
+      color: #374151;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .quote-author {
+      margin-top: 1.5rem;
+      text-align: right;
+      font-style: italic;
+      color: #6b7280;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box">
+    <p class="quote-text">
+      The best way to predict the future is to invent it.
+    </p>
+    <p class="quote-author">– Alan Kay</p>
+  </div>
+</body>
+</html>
