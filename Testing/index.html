@@ -1,9 +1,9 @@
-<!-- POPUP for Telegram & Discord -->
+<!-- Pop-up Modal -->
 <div id="socialPopup" style="display: none;">
   <div class="popup-content">
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Join Our Community!</h2>
-    <p>Connect with us on Telegram and Discord for updates, support & fun!</p>
+    <p>Connect with us on Telegram and Discord for updates, support, and discussions.</p>
     <div class="btn-group">
       <a href="https://t.me/YourTelegramLink" target="_blank" class="btn telegram">Join Telegram</a>
       <a href="https://discord.gg/YourDiscordInvite" target="_blank" class="btn discord">Join Discord</a>
@@ -11,35 +11,34 @@
   </div>
 </div>
 
+<!-- CSS Styles -->
 <style>
   #socialPopup {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
-    padding: 15px;
-    box-sizing: border-box;
   }
 
   .popup-content {
     background: #fff;
-    padding: 25px 20px;
+    padding: 30px;
     border-radius: 12px;
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     text-align: center;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    animation: fadeIn 0.3s ease-in-out;
-    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.4s ease;
   }
 
   .popup-content h2 {
-    font-size: 22px;
     margin-bottom: 10px;
     color: #333;
   }
@@ -47,29 +46,25 @@
   .popup-content p {
     font-size: 16px;
     color: #555;
-    margin-bottom: 20px;
-    line-height: 1.4;
   }
 
   .btn-group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    margin-top: 20px;
   }
 
   .btn {
-    display: block;
-    padding: 12px;
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: 16px;
     transition: 0.3s;
-    color: #fff;
   }
 
   .telegram {
     background-color: #0088cc;
+    color: white;
   }
 
   .telegram:hover {
@@ -78,6 +73,7 @@
 
   .discord {
     background-color: #5865F2;
+    color: white;
   }
 
   .discord:hover {
@@ -98,21 +94,20 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
-
-  @media (min-width: 480px) {
-    .btn-group {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .btn {
-      width: auto;
-      padding: 12px 20px;
-    }
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
   }
 </style>
 
+<!-- JavaScript -->
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('socialPopup').style.display = 'flex';
+    }, 1000); // Delay for 1 second after page load
+  });
 
+  function closePopup() {
+    document.getElementById('socialPopup').style.display = 'none';
+  }
+</script>
