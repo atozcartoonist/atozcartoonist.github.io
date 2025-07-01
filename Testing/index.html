@@ -115,18 +115,4 @@
   }
 </style>
 
-<script>
-  // Show popup only once per session
-  window.addEventListener('load', function () {
-    if (!sessionStorage.getItem("socialPopupShown")) {
-      setTimeout(function () {
-        document.getElementById("socialPopup").style.display = "flex";
-        sessionStorage.setItem("socialPopupShown", "true");
-      }, 1000); // Delay 1 sec after page load
-    }
-  });
 
-  function closePopup() {
-    document.getElementById("socialPopup").style.display = "none";
-  }
-</script>
