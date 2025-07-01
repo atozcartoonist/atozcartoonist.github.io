@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Pop-up Modal -->
+<!-- Pop-up Modal for Telegram & Discord -->
 <div id="socialPopup" style="display: none;">
   <div class="popup-content">
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Join Us!</h2>
-    <p>We got copyright on our old channel last night, so we have created this new channel, so join now and share with your friends!</p>
+    <p>We got copyright on our old channel last night, so we have created this new channel — join now and share with your friends!</p>
     <div class="btn-group">
       <a href="https://t.me/atozcartoonistoffcial" target="_blank" class="btn telegram">Join Telegram</a>
       <a href="https://discord.gg/ZUW8yzDutd" target="_blank" class="btn discord">Join Discord</a>
@@ -16,26 +11,25 @@
   </div>
 </div>
 
-<!-- CSS Styles -->
 <style>
   #socialPopup {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99999;
+    padding: 15px;
+    box-sizing: border-box;
   }
 
   .popup-content {
     background: #fff;
-    padding: 30px;
+    padding: 25px 20px;
     border-radius: 12px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     text-align: center;
     position: relative;
@@ -44,6 +38,7 @@
   }
 
   .popup-content h2 {
+    font-size: 22px;
     margin-bottom: 10px;
     color: #333;
   }
@@ -51,25 +46,29 @@
   .popup-content p {
     font-size: 16px;
     color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
   }
 
   .btn-group {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .btn {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 5px;
+    display: block;
+    padding: 12px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    font-size: 16px;
     transition: 0.3s;
+    color: #fff;
   }
 
   .telegram {
     background-color: #0088cc;
-    color: white;
   }
 
   .telegram:hover {
@@ -78,7 +77,6 @@
 
   .discord {
     background-color: #5865F2;
-    color: white;
   }
 
   .discord:hover {
@@ -87,7 +85,7 @@
 
   .close-btn {
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 15px;
     font-size: 22px;
     cursor: pointer;
@@ -99,20 +97,35 @@
   }
 
   @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
-    to {opacity: 1; transform: scale(1);}
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (min-width: 480px) {
+    .btn-group {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .btn {
+      width: auto;
+      padding: 12px 20px;
+    }
   }
 </style>
 
-<!-- JavaScript -->
 <script>
+  // Show popup only once per session
   window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.getElementById('socialPopup').style.display = 'flex';
-    }, 1000); // Delay for 1 second after page load
+    if (!sessionStorage.getItem("socialPopupShown")) {
+      setTimeout(function () {
+        document.getElementById("socialPopup").style.display = "flex";
+        sessionStorage.setItem("socialPopupShown", "true");
+      }, 1000); // Delay 1 sec after load
+    }
   });
 
   function closePopup() {
-    document.getElementById('socialPopup').style.display = 'none';
+    document.getElementById("socialPopup").style.display = "none";
   }
 </script>
