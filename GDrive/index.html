@@ -1,82 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>AtoZCartoonist (GDrive)</title>
-<meta name="robots" content="noindex"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/lumen/bootstrap.min.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8=" crossorigin="anonymous"></script>
-<style>
-body {
-    font-family: 'Varela Round';font-size: 10px;
-}
-/* Style buttons */
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 18px;
-}
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: RoyalBlue;
-}
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-</style>
-</head>
-<body><script>
-    var iframe = getUrlVars()["id"];
-    //******************************
-    // FUNÇÃO PARA BUSCAR VAR URL  *
-    //******************************
-    function getUrlVars() {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            vars[key] = value;
-        });
-        return vars;
-    }
-    //********************
-    // VAR DOCUMENT = D  *
-    //********************
-    var d = document;
-</script><center><br/><a href="/"><img src="http://4.bp.blogspot.com/-tyI9VhNYz3s/YCpnEA4zceI/AAAAAAAADqo/Vsd082M2aUoA0M_iF78j00uuV22Br0q3ACK4BGAYYCw/s1600/20210215_014220.png" alt="AtoZcartoonist" width="315" height="auto"/></a></center>
-<script type="text/javascript">
-d.write('<hr/><center><a href="/GDrive/Player/?id='+iframe+'"><button class="btn"><i class="fa fa-play"></i> Play Online</button></a></center><hr/><center><a href="https://drive.google.com/uc?id='+iframe+'&export=download"><button class="btn"><i class="fa fa-download"></i> Download</button></a></center><hr/>')
-</script>
-<center><a href="https://telegram.me/+BIkPgyw4y4lkYmVl"><img style="width:300%;height:auto;max-width:250px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo1lNg1w1ipHMjyej_HFh2mO5uL_xR8WJOBKJ3s4MKifJUnepjQIpouBlPM7eyYGMQIc8MjXgor4l0lKPODl-5ulSL9tsUYQwPehHjNKMxgrbijBdpFIkTD71nZ5xn8GYJGzV032pe8Rno2fdQLkYvjclIpJhg260zi8Q-358_pZtSD0p4ybpHBoIWUPg/s960/gifmaker_me.gif" alt="Telegram"></a></center>
-<hr />
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>AtoZCartoonist - Premium Access</title>
+    <meta name="robots" content="noindex"/>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --card-border: rgba(255, 255, 255, 0.4);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --btn-download-bg: white;
+            --btn-download-border: #e2e8f0;
+            --btn-download-hover: #f8fafc;
+            --orb-1: #93c5fd;
+            --orb-2: #c084fc;
+        }
 
-<footer>
-        <div class="container py-3">
-           <center><h5><b><p>AtoZCartoonist (GDrive) is affiliated to <a href="/">AtoZCartoonist</a>. And does not host any files on it's servers. All files or contents hosted on third party
-                websites. <a href="/">AtoZCartoonist</a> does not accept responsibility for contents
-                hosted on third party websites. We just index those links which are already available in internet.</p>
-            <p>Copyright &copy; 2026 <a class="skul"
-                    href="/">AtoZCartoonist</a></p></b></h5></center>
+        [data-theme="dark"] {
+            --bg-gradient: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 70%);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --btn-download-bg: #1e293b;
+            --btn-download-border: rgba(255,255,255,0.1);
+            --btn-download-hover: #334155;
+            --orb-1: #3b82f6;
+            --orb-2: #8b5cf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            padding: 20px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        /* Abstract Background Orbs */
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+            transition: background 0.5s ease;
+        }
+        .orb-1 { width: 400px; height: 400px; background: var(--orb-1); top: -100px; left: -100px; animation: float 10s ease-in-out infinite alternate; }
+        .orb-2 { width: 500px; height: 500px; background: var(--orb-2); bottom: -150px; right: -150px; animation: float 12s ease-in-out infinite alternate-reverse; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(30px); }
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: background 0.5s ease, border 0.5s ease;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        p.subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-play {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-play:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-download {
+            background: var(--btn-download-bg);
+            color: var(--text-main);
+            border: 1px solid var(--btn-download-border);
+        }
+
+        .btn-download:hover {
+            background: var(--btn-download-hover);
+            transform: translateY(-2px);
+        }
+
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #2AABEE;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .telegram-btn:hover {
+            background: #229ED9;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // Check local storage for theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+
+    <!-- Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+
+    <script>
+        // Set correct icon on load
+        const themeIcon = document.getElementById('themeIcon');
+        if (savedTheme === 'dark') {
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Toggle Theme
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            if (newTheme === 'dark') {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+
+    <script>
+        // Get URL parameter securely
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+        var fileId = getUrlVars()["id"];
+    </script>
+
+    <div class="glass-card">
+        <a href="/">
+            <img class="logo" src="http://4.bp.blogspot.com/-tyI9VhNYz3s/YCpnEA4zceI/AAAAAAAADqo/Vsd082M2aUoA0M_iF78j00uuV22Br0q3ACK4BGAYYCw/s1600/20210215_014220.png" alt="AtoZCartoonist">
+        </a>
+        
+        <h1>Your file is ready!</h1>
+        
+
+        <div class="action-buttons">
+            <script>
+                document.write('<a href="/GDrive/Player/?id=' + fileId + '" class="btn btn-play"><i class="fa-solid fa-play"></i> Watch Online</a>');
+                document.write('<a href="https://drive.google.com/uc?id=' + fileId + '&export=download" class="btn btn-download"><i class="fa-solid fa-download"></i> Direct Download</a>');
+            </script>
         </div>
+
+        <div style="border-top: 1px solid var(--card-border); padding-top: 25px; margin-top: 10px;">
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">Stay updated with our latest releases:</p>
+            <a href="https://telegram.me/+BIkPgyw4y4lkYmVl" class="telegram-btn" target="_blank">
+                <i class="fa-brands fa-telegram"></i> Join Telegram Channel
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>AtoZCartoonist (GDrive) is affiliated with <a href="/">AtoZCartoonist</a> but does not host any files on its servers. All files are hosted on third-party websites.</p>
+        <p style="margin-top: 10px;">Copyright &copy; 2026 <a href="/">AtoZCartoonist</a></p>
     </footer>
-    <hr />
-<style>#g207{position:fixed!important;position:absolute;top:0;top:expression
-((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document
-.body.scrollTop)+"px");
-left:0;width:100%;height:100%;background-color:#fff;opacity:0.9;filter:alpha(opacity=90);display:block}#g207 p{opacity:1;filter:none;font:bold 16px Verdana,Arial,sans-serif;text-align:center;margin:20% 0}#g207 p a,#g207 p i{font-size:12px}#g207 ~ *{display:none}</style><noscript><i id=g207><p>Please enable JavaScript!<br />Bitte aktiviere JavaScript!<br />S'il vous pla&icirc;t activer JavaScript!<br />Por favor,activa el JavaScript!<br /><a href="http://antiblock.org/">antiblock.org</a></p></i></noscript><script>(function(w,u){var d=w.document,z=typeof u;function g207(){function c(c,i){var e=d.createElement('i'),b=d.body,s=b.style,l=b.childNodes.length;if(typeof i!=z){e.setAttribute('id',i);s.margin=s.padding=0;s.height='100%';l=Math.floor(Math.random()*l)+1}e.innerHTML=c;b.insertBefore(e,b.childNodes[l-1])}function g(i,t){return !t?d.getElementById(i):d.getElementsByTagName(t)};function f(v){if(!g('g207')){c('<p>Please turn off your Ad Blocker!<br/>Without advertising we cant maintain this website <br/> So, Please disable your ad blocker and support us!!!<br/>','g207')}};(function(){var a=['Adrectangle','PageLeaderAd','ad-column','advertising2','divAdBox','mochila-column-right-ad-300x250-1','searchAdSenseBox','ad','ads','adsense'],l=a.length,i,s='',e;for(i=0;i<l;i++){if(!g(a[i])){s+='<a id="'+a[i]+'"></a>'}}c(s);l=a.length;for(i=0;i<l;i++){e=g(a[i]);if(e.offsetParent==null||(w.getComputedStyle?d.defaultView.getComputedStyle(e,null).getPropertyValue('display'):e.currentStyle.display
-)=='none'){return f('#'+a[i])}}}());(function(){var t=g(0,'img'),a=['/adaffiliate_','/adops/ad','/adsales/ad','/adsby.','/adtest.','/ajax/ads/ad','/controller/ads/ad','/pageads/ad','/weather/ads/ad','-728x90-'],i;if(typeof t[0]!=z&&typeof t[0].src!=z){i=new Image();i.onload=function(){this.onload=z;this.onerror=function(){f(this.src)};this.src=t[0].src+'#'+a.join('')};i.src=t[0].src}}());(function(){var o={'http://pagead2.googlesyndication.com/pagead/show_ads.js':'google_ad_client','http://js.adscale.de/getads.js':'adscale_slot_id','http://get.mirando.de/mirando.js':'adPlaceId'},S=g(0,'script'),l=S.length-1,n,r,i,v,s;d.write=null;for(i=l;i>=0;--i){s=S[i];if(typeof o[s.src]!=z){n=d.createElement('script');n.type='text/javascript';n.src=s.src;v=o[s.src];w[v]=u;r=S[0];n.onload=n.onreadystatechange=function(){if(typeof w[v]==z&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){n.onload=n.onreadystatechange=null;r.parentNode.removeChild(n);w[v]=null}};r.parentNode.insertBefore(n,r);setTimeout(function(){if(w[v]!==null){f(n.src)}},2000);break}}}())}if(d.addEventListener){w.addEventListener('load',g207,false)}else{w.attachEvent('onload',g207)}})(window);</script>
+
+</body>
+</html>
