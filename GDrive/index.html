@@ -221,7 +221,35 @@
         footer a:hover {
             text-decoration: underline;
         }
+    
+        /* Mobile Responsive Fixes */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .glass-card {
+                padding: 15px;
+            }
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px 0;
+            }
+            .logo {
+                height: auto;
+                max-width: 250px;
+            }
+            .btn {
+                width: 100%;
+                font-size: 14px;
+            }
+            .action-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
+
     <script>
         // Check local storage for theme
         const savedTheme = localStorage.getItem('theme') || 'light';
