@@ -231,7 +231,45 @@
             text-decoration: none;
             font-weight: 600;
         }
+    
+        /* Mobile Responsive Fixes */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .glass-card {
+                padding: 15px;
+            }
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px 0;
+            }
+            .logo {
+                height: auto;
+                max-width: 250px;
+            }
+            .video-container {
+                padding-top: 65%; /* slightly taller on mobile to compensate for iframe player UI */
+            }
+            .tabs {
+                gap: 10px;
+                font-size: 13px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .btn {
+                width: 100%;
+                font-size: 13px;
+                padding: 12px 10px;
+            }
+            .actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
+
     <script>
         // Check local storage for theme
         const savedTheme = localStorage.getItem('theme') || 'dark'; // Player defaults to dark
